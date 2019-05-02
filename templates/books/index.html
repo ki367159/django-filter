@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <input type="text" name="q" placeholder="Keyword">
+        <button type="submit">Submit</button>
+    </form>
+    <ul>
+        {% for book in books %}
+            <li>
+                {{ book.name }}<br>
+                {{ book.price }}<br>
+                {{ book.author.name }}
+            </li>
+        {% empty %}
+            <p>No Books!!!</p>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
